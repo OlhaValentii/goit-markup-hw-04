@@ -12,6 +12,11 @@
         --secondary-bg-cl: #2F303A;
         --accent-bg-cl: #2196F3;
         --secondary-accent-bg-cl: #F5F4FA;
+    /* logo-icons */
+        --logo-icons-main-cl: #AFB1B8;
+        --logo-icons-accent-cl: #2196F3;
+        --logo-icons-secondary-accent-cl: #FFFFFF;
+
     /* others */
         --portfolio-items: 3;
         --portfolio-gap: 30px;
@@ -19,6 +24,8 @@
         --team-gap: 30px;
         --benefits-items: 4;
         --benefits-gap: 30px;
+        --clients-gap: 30px;
+        --clients-items: 6;
 }
 
 /* reset */
@@ -151,7 +158,6 @@ body {
     color: var(--main-txt-cl);
 }
 
-     
 .header-link:hover,
 .header-link:focus {
     color: var(--accent-txt-cl);
@@ -185,9 +191,23 @@ body {
     margin-right: 50px;
 }
 
+.header-icon {
+    margin-right: 10px;
+    fill: var(--secondary-txt-cl);
+}
+
+.header-icon:hover,
+.header-icon:focus {
+    fill: var(--accent-txt-cl);
+}
+
 /* hero*/
 .hero {
-    background-color: var(--secondary-bg-cl);
+    max-width: 1600px;
+    background-image: url(../images/Img.svg), linear-gradient(to right, rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 .hero-container {
@@ -256,6 +276,17 @@ body {
 }
 /* benefits-set end */
 
+.benefits-icon-container {
+    display: flex;
+    width: 270px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    background: #F5F4FA;
+    border-radius: 4px;
+}
+
 .benefits-list-item-title {
     font-weight: 700;
     font-size: 14px;
@@ -297,6 +328,7 @@ body {
     padding-top: 94px;
     padding-bottom: 94px;
 }
+
 .team {
     background-color: var(--secondary-accent-bg-cl);
 }
@@ -311,11 +343,12 @@ body {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-   gap: var(--team-gap);
+    gap: var(--team-gap);
 }
 
 .team-set-item {
     flex-basis: calc(100% / var(--team-gap) * 3) / var(--team-items));
+    background-color: var(--main-bg-cl);
 }
 /* team-set end */
 
@@ -345,6 +378,89 @@ body {
     color: var(--secondary-txt-cl);
 }
 
+.team-social-link-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.team-social-link-list-item {
+    margin-right: 10px;
+}
+
+.team-social-link-list-item:last-child {
+    margin-right: 0;
+}
+
+.team-social-link-icon-container {
+    width: 44px;
+    height: 44px;
+    background-color: var(--main-bg-cl);
+    border-radius: 50%;
+}
+
+.team-social-link-icon-container:hover,
+.team-social-link-icon-container:focus {
+    background-color: var(--logo-icons-accent-cl);
+}
+
+.team-social-link-icon {
+    fill: var(--logo-icons-main-cl);
+    margin: 12px;
+}
+
+.team-social-link-icon:hover,
+.team-social-link-icon:focus {
+    fill: var(--logo-icons-secondary-accent-cl);
+}
+
+/* clients */
+.clients-container {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.clients-title {
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+.clients-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.clients-list-item {
+    margin-right: 30px;
+}
+
+.clients-list-item:last-child {
+    margin-right: 0;
+}
+
+.clients-icon {
+    fill: var(--logo-icons-main-cl);
+}
+
+.clients-icon:hover,
+.clients-icon:focus {
+    fill: var(--logo-icons-accent-cl);
+}
+
+.clients-list-item {
+    padding: 16px 32px;
+    border: 1px solid var(--logo-icons-main-cl);
+    border-radius: 4px;
+}
+
+.clients-list-item:hover,
+.clients-list-item:focus {
+    border: 1px solid var(--logo-icons-accent-cl);
+}
+
 /* portfolio */
 .portfolio {
     background-color: var(--main-bg-cl);
@@ -370,6 +486,12 @@ body {
 
 .portfolio-filter-list-item:last-child {
     margin-right: 0;
+}
+
+.portfolio-filter-list-item:hover,
+.portfolio-filter-list-item:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
 }
 
 .portfolio-filter-btn {
@@ -411,6 +533,11 @@ body {
     border: 1px solid #EEEEEE;
 }
 
+.portfolio-list-item:hover,
+.portfolio-list-item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .portfolio-list-item-info {
     margin: 20px 24px;
 }
@@ -438,9 +565,21 @@ body {
 
 .footer-container {
     display: flex;
-    flex-direction: column;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    flex-direction: row;
+    padding: 0;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-contact-container {
+    margin-top: 60px;
+    margin-right:  70px;
 }
 
 .footer-logo {}
@@ -451,11 +590,18 @@ body {
 
 .footer-address {
     font-style: normal;
+    margin-top: 20px;
 }
 
 .footer-address-list, .list {}
 
-.footer-address-list-item {}
+.footer-address-list-item {
+    margin-bottom: 9px;
+}
+
+.footer-address-list-item:last-child {
+    margin-bottom: 0;
+}
 
 .footer-address-link {
     font-weight: 400;
@@ -481,4 +627,48 @@ body {
 .footer-link:hover,
 .footer-link:focus {
     color: var(--accent-txt-cl);
+}
+
+.footer-social-link-container {
+    margin-top: 72px;
+    margin-bottom: 100px;
+}
+
+.footer-social-link-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14x;
+    text-transform: uppercase;
+    color: var(--secondary-accent-txt-cl);
+    margin-bottom: 20px;
+}
+
+.footer-social-link-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-social-link-list-item {
+    margin-right: 10px;
+}
+
+.footer-social-link-list-item:last-child {
+    margin-right: 0;
+}
+
+.footer-social-link-icon-container {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-link-icon-container:hover,
+.footer-social-link-icon-container:focus {
+    background: var(--logo-icons-accent-cl);
+}
+
+.footer-social-link-icon {
+    fill: var(--logo-icons-secondary-accent-cl);
+    margin: 12px;
 }
