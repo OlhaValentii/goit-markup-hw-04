@@ -166,7 +166,7 @@ body {
 .header-contact-list {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-content: center;
 }
 
 .header-contact-list, .list {}
@@ -193,12 +193,12 @@ body {
 
 .header-icon {
     margin-right: 10px;
-    fill: var(--secondary-txt-cl);
+    fill: currentColor;
 }
 
 .header-icon:hover,
 .header-icon:focus {
-    fill: var(--accent-txt-cl);
+    fill: currentColor;
 }
 
 /* hero*/
@@ -252,13 +252,16 @@ body {
 }
 
 /* benefits */
+.benefits-container {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 .benefits-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    padding-top: 94px;
-    padding-bottom: 94px;
 }
 
 /* benefits-set start */
@@ -273,7 +276,6 @@ body {
 .benefits-set-item {
     flex-basis: calc(100% / var(--benefits-items) - var(--benefits-gap));
     margin-left: var(--benefits-gap);
-    margin-top: var(--benefits-gap);
 }
 /* benefits-set end */
 
@@ -377,13 +379,13 @@ body {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--secondary-txt-cl);
+    margin-bottom: 16px;
 }
 
 .team-social-link-list {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 16px;
 }
 
 .team-social-link-list-item {
@@ -394,26 +396,31 @@ body {
     margin-right: 0;
 }
 
-.team-social-link-icon-container {
+.team-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 44px;
     height: 44px;
+    color: var(--logo-icons-main-cl);
     background-color: var(--main-bg-cl);
     border-radius: 50%;
 }
 
-.team-social-link-icon-container:hover,
-.team-social-link-icon-container:focus {
+.team-social-link:hover,
+.team-social-link:focus {
+    color: var(--logo-icons-secondary-accent-cl);
     background-color: var(--logo-icons-accent-cl);
 }
 
 .team-social-link-icon {
-    fill: var(--logo-icons-main-cl);
+    fill: currentColor;
     margin: 12px;
 }
 
 .team-social-link-icon:hover,
 .team-social-link-icon:focus {
-    fill: var(--logo-icons-secondary-accent-cl);
+    fill: currentColor;
 }
 
 /* clients */
@@ -435,31 +442,34 @@ body {
 }
 
 .clients-list-item {
+    
+}
+
+.clients-list-item {
     margin-right: 30px;
+    padding: 16px 32px;
+    color: var(--logo-icons-main-cl);
+    border: 1px solid var(--logo-icons-main-cl);
+    border-radius: 4px;
 }
 
 .clients-list-item:last-child {
     margin-right: 0;
 }
 
+.clients-list-item:hover,
+.clients-list-item:focus {
+    color: var(--logo-icons-accent-cl);
+    border: 1px solid var(--logo-icons-accent-cl);
+}
+
 .clients-icon {
-    fill: var(--logo-icons-main-cl);
+    fill: currentColor;
 }
 
 .clients-icon:hover,
 .clients-icon:focus {
-    fill: var(--logo-icons-accent-cl);
-}
-
-.clients-list-item {
-    padding: 16px 32px;
-    border: 1px solid var(--logo-icons-main-cl);
-    border-radius: 4px;
-}
-
-.clients-list-item:hover,
-.clients-list-item:focus {
-    border: 1px solid var(--logo-icons-accent-cl);
+    fill: currentColor;
 }
 
 /* portfolio */
@@ -565,6 +575,7 @@ body {
 }
 
 .footer-container {
+    height: 252px;
     display: flex;
     flex-direction: row;
     padding: 0;
@@ -576,11 +587,14 @@ body {
     justify-content: flex-start;
     list-style-type: none;
     padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .footer-contact-container {
-    margin-top: 60px;
     margin-right:  70px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .footer-logo {}
@@ -631,8 +645,8 @@ body {
 }
 
 .footer-social-link-container {
-    margin-top: 72px;
-    margin-bottom: 100px;
+    padding-top: 72px;
+    padding-bottom: 100px;
 }
 
 .footer-social-link-title {
@@ -657,19 +671,23 @@ body {
     margin-right: 0;
 }
 
-.footer-social-link-icon-container {
+.footer-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 44px;
     height: 44px;
     border-radius: 50%;
+    color: var(--logo-icons-secondary-accent-cl);
     background: rgba(255, 255, 255, 0.1);
 }
 
-.footer-social-link-icon-container:hover,
-.footer-social-link-icon-container:focus {
+.footer-social-link:hover,
+.footer-social-link:focus {
     background: var(--logo-icons-accent-cl);
 }
 
 .footer-social-link-icon {
-    fill: var(--logo-icons-secondary-accent-cl);
+    fill: currentColor;
     margin: 12px;
 }
